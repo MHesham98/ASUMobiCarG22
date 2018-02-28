@@ -25,10 +25,10 @@ Keypad kpd = Keypad( makeKeymap(keys), rowPins, colPins, ROWS, COLS );
 
 const int rs = 8, en = 9, d4 = 10, d5 = 11, d6 = 12, d7 = 13; 
 LiquidCrystal lcd(rs, en, d4, d5, d6, d7);
- long Num1,Num2,Number;
+ float Num1,Num2,Number;
  char key,action;
  boolean result = false;
- 
+ char flag=0;
 void setup() {
   lcd.begin(16, 2); 
   lcd.print("Calculator");
@@ -191,9 +191,19 @@ void DisplayResult()
   
   if (result==true)
     {
-    lcd.print(" ="); lcd.print(Number);
+    lcd.print(" =");
+    if(Num2==0&&action=='/')
+    {
+     lcd.print("Error");flag=1;
+    }
+    else
+    lcd.print(Number);
     } 
   
     lcd.setCursor(0, 1);
+    if(Num2==0&&action=='/'&&flag==1)
+     lcd.print("Error");
+    else
     lcd.print(Number);
+    flag=0;
 }
