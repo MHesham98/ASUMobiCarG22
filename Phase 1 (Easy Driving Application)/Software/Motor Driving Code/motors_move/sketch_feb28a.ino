@@ -1,74 +1,66 @@
-int led = 3;        //led 
-int outPin1 = 5;     //motor1 
-int outPin2 = 6;    //motor1 
-int outPin4 = 11;   //motor2 
-int outPin3 = 12;   //motor2 
-char bt = 0;       //BT  
-/*------------------------------------------------------------------------------*/ 
+
 void setup() 
 { 
 Serial.begin(9600); 
-pinMode(outPin1,OUTPUT); 
-pinMode(outPin2,OUTPUT); 
-pinMode(outPin3,OUTPUT); 
-pinMode(outPin4,OUTPUT); 
-pinMode(led,OUTPUT); 
+ pinMode(13,OUTPUT);
+ pinMode(12,OUTPUT);
+ pinMode(11,OUTPUT);
+ pinMode(4,OUTPUT);
+ pinMode(5,OUTPUT);
+ pinMode(7,OUTPUT);
 } 
 void loop() 
 { 
 if (Serial.available() > 0) 
 { 
- bt = Serial.read(); 
- digitalWrite(led, 1); 
- /*________________________________________________________________________*/ 
- if(bt == 'F')        //move forwards 
+ char Data = Serial.read();  
+ if(Data == 'F')        //move forwards 
  { 
-   digitalWrite(outPin1,HIGH); 
-   digitalWrite(outPin2,LOW); 
-   digitalWrite(outPin3,HIGH); 
-   digitalWrite(outPin4,LOW); 
+   digitalWrite(13,1);
+  digitalWrite(12,0);
+  analogWrite(11,200);
+  digitalWrite(4,1);
+  digitalWrite(7,0);
+  analogWrite(5,200);
  } 
- else if (bt == 'B')       //move backwards 
+ else if (Data == 'B')       //move backwards 
  { 
-   digitalWrite(outPin1,LOW); 
-   digitalWrite(outPin2,HIGH); 
-   digitalWrite(outPin3,LOW); 
-   digitalWrite(outPin4,HIGH); 
+   digitalWrite(13,0);
+  digitalWrite(12,1);
+  analogWrite(11,200);
+  digitalWrite(4,0);
+  digitalWrite(7,1);
+  analogWrite(5,200);
+  
+  
  } 
- else if (bt == 'S')     //stop!! 
+ else if (Data == 'S')     //stop!! 
  {    
-   digitalWrite(outPin1,LOW); 
-   digitalWrite(outPin2,LOW); 
-   digitalWrite(outPin3,LOW); 
-   digitalWrite(outPin4,LOW); 
+   digitalWrite(13,0);
+  digitalWrite(12,0);
+  analogWrite(11,0);
+  digitalWrite(4,0);
+  digitalWrite(7,0);
+  analogWrite(5,0);
  } 
- else if (bt == 'R')    //right 
+ else if (Data == 'R')    //right 
  { 
-   digitalWrite(outPin1,HIGH); 
-   digitalWrite(outPin2,LOW); 
-   digitalWrite(outPin3,LOW); 
-   digitalWrite(outPin4,LOW); 
+   digitalWrite(13,1);
+  digitalWrite(12,0);
+  analogWrite(11,200);
+  digitalWrite(4,0);
+  digitalWrite(7,0);
+  analogWrite(5,0);
  } 
- else if (bt == 'L')     //left 
+ else if (Data == 'L')     //left 
  { 
-   digitalWrite(outPin1,LOW); 
-   digitalWrite(outPin2,LOW); 
-   digitalWrite(outPin3,HIGH); 
-   digitalWrite(outPin4,LOW); 
+   digitalWrite(13,0);
+  digitalWrite(12,0);
+  analogWrite(11,200);
+  digitalWrite(4,1);
+  digitalWrite(7,0);
+  analogWrite(5,0);
  } 
- else if (bt == 'I')    //forward right 
- { 
-   digitalWrite(outPin1,HIGH); 
-   digitalWrite(outPin2,LOW); 
-   digitalWrite(outPin3,LOW); 
-   digitalWrite(outPin4,HIGH); 
- } 
- else if (bt == 'G')    //forward left 
- { 
-   digitalWrite(outPin1,LOW); 
-   digitalWrite(outPin2,HIGH); 
-   digitalWrite(outPin3,HIGH); 
-   digitalWrite(outPin4,LOW); 
- } 
+
  } 
 } 
