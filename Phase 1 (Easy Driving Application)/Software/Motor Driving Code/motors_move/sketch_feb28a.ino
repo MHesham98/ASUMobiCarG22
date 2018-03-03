@@ -59,7 +59,7 @@ if (Serial.available() > 0)
   analogWrite(11,200);
   digitalWrite(4,1);
   digitalWrite(7,0);
-  analogWrite(5,0);
+  analogWrite(5,200);
  } 
 
  } 
