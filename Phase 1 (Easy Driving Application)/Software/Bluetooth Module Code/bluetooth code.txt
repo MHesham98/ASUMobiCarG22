@@ -1,0 +1,6 @@
+void setup() { Serial.begin(38400); }
+char carDirection()
+ {
+if(Serial.available() > 0){  return Serial.read(); }
+return 'N';
+}
