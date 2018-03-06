@@ -1,0 +1,90 @@
+int Motor1Pin = 4; // MotorPin set to pin2 int Motor1forward = 5;
+int Motor1backward = 6;  
+
+int Motor2Pin = 7; // MotorPin set to pin5 int Motor2forward = 8;
+int Motor2backward = 9;  
+
+void setup() 
+{ 
+Serial.begin(9600);
+pinMode(Motor1Pin,OUTPUT);
+pinMode(Motor1forward, OUTPUT); 
+pinMode(Motor1backward, OUTPUT);
+pinMode(Motor2Pin,OUTPUT);
+pinMode(Motor2forward, OUTPUT); 
+pinMode(Motor2backward, OUTPUT);
+ establishContact(); } 
+void loop()
+ { 
+ digitalWrite(Motor1Pin, HIGH); 
+ digitalWrite(Motor2Pin, HIGH); 
+ 
+ if (Serial.available() > 0) 
+ { 
+ char serialread = Serial.read(); switch(serialread)
+ { 
+ case 'UP': 
+ 
+Serial.print(serialread); analogWrite(Motor1forward, 255); analogWrite(Motor1backward, 0);
+ analogWrite(Motor2forward, 255); analogWrite(Motor2backward, 0);
+break; 
+
+case 'DOWN':
+
+Serial.print(serialread); analogWrite(Motor1forward, 0); analogWrite(Motor1backward, 255);
+ analogWrite(Motor2forward, 0); analogWrite(Motor2backward, 255);
+break;
+ 
+case 'RIGHT-UP': 
+
+
+Serial.print(serialread); analogWrite(Motor1forward, 255); analogWrite(Motor1backward, 0);
+ analogWrite(Motor2forward, 0); analogWrite(Motor2backward, 0);
+break; 
+
+ case 'LEFT-UP': 
+ 
+ 
+Serial.print(serialread); analogWrite(Motor1forward, 0); analogWrite(Motor1backward, 0);
+ analogWrite(Motor2forward, 255); analogWrite(Motor2backward, 0);
+break; 
+
+case 'RIGHT-DOWN': 
+
+
+Serial.print(serialread); analogWrite(Motor1forward, 0); analogWrite(Motor1backward, 255);
+ analogWrite(Motor2forward, 0); analogWrite(Motor2backward, 0);
+break; 
+
+ case 'LEFT-DOWN': 
+ 
+ 
+Serial.print(serialread); analogWrite(Motor1forward, 0); analogWrite(Motor1backward, 0);
+ analogWrite(Motor2forward, 0); analogWrite(Motor2backward, 255);
+break; 
+
+case 'RIGHT': 
+
+
+Serial.print(serialread); analogWrite(Motor1forward, 255); analogWrite(Motor1backward, 0);
+ analogWrite(Motor2forward, 0); analogWrite(Motor2backward, 255);
+break; 
+
+ case 'LEFT': 
+ 
+ 
+Serial.print(serialread); analogWrite(Motor1forward, 0); analogWrite(Motor1backward, 255);
+ analogWrite(Motor2forward, 255); analogWrite(Motor2backward, 0);
+break; 
+
+
+}
+}
+} 
+
+void establishContact()
+ { 
+ while (Serial.available() <= 0)
+  { 
+ Serial.print('A'); // send a capital A delay(300);  
+} 
