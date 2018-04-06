@@ -1,5 +1,6 @@
 
-
+#include <NewPing.h>
+NewPing sonar(9, 10, 200);
 void setup() 
 { 
 Serial.begin(9600); 
@@ -16,6 +17,8 @@ void loop()
  
 if (Serial.available() > 0) 
 { 
+ unsigned int distanceInCms = sonar.ping() / US_ROUNDTRIP_CM;
+ Serial.println("Distance: " + String(distanceInCms) + "cm");
  char Data = Serial.read();  
  if(Data=='F' && distanceInCms<30)
  {
