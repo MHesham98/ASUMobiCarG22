@@ -46,13 +46,6 @@ else if(Data == 'F')        //move forwards
   analogWrite(3,200);
   
  } 
- else if (Data == 'S')     //stop!! 
- {    
-   digitalWrite(13,0);
-  digitalWrite(12,0);
-  digitalWrite(8,0);
-  digitalWrite(7,0);
- } 
  else if (Data == 'R')    //right 
  { 
    digitalWrite(13,0);
