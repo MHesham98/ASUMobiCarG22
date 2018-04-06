@@ -31,10 +31,8 @@ if (Serial.available() > 0)
  }
 else if(Data == 'F')        //move forwards 
  { 
-   digitalWrite(13,0);
   digitalWrite(12,1);
   analogWrite(3,200);
-  digitalWrite(8,0);
   digitalWrite(7,1);
   analogWrite(5,200);
  } 
