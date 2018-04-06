@@ -50,10 +50,8 @@ else if(Data == 'F')        //move forwards
  {    
    digitalWrite(13,0);
   digitalWrite(12,0);
-  analogWrite(3,0);
   digitalWrite(8,0);
   digitalWrite(7,0);
-  analogWrite(5,0);
  } 
  else if (Data == 'R')    //right 
  { 
