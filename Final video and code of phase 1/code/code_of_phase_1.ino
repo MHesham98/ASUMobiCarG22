@@ -60,7 +60,6 @@ else if(Data == 'F')        //move forwards
   analogWrite(3,200);
   digitalWrite(8,0);
   digitalWrite(7,0);
-  analogWrite(5,0);
  } 
  else if (Data == 'L')     //left 
  { 
