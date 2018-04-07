@@ -1,1 +1,7 @@
 
+Bluetooth is a wireless technology standard for exchanging data over short distances from fixed and mobile devices.
+WHY WE USE BLUETOOTH MODULE?
+To enable us to communicate with our controller arduino in order to take orders from our mobile application.
+HC-05 bluetooth module consist of 6 pins :
+we used 4 pins : 1.5v taken from arduino. 2. ground connected to ground of circuit. 3.RX connected to TX of arduino 4.TX connected to RX of arduino.
+RX connected to TX and vice versa as in our project bluetooth module transmits(TX) orders recieved by arduino(RX).
