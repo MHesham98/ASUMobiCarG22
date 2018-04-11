@@ -1,6 +1,12 @@
 
 #include <NewPing.h>
 NewPing sonar(9, 10, 200);
+// prototybes of functions
+void forward();
+void backward();
+void left();
+void right();
+
 void setup() 
 { 
 Serial.begin(9600); 
@@ -31,39 +37,53 @@ if (Serial.available() > 0)
  }
 else if(Data == 'F')        //move forwards 
  { 
-  digitalWrite(12,1);
-  analogWrite(3,200);
-  digitalWrite(7,1);
-  analogWrite(5,200);
+   forward();
  } 
  else if (Data == 'B')       //move backwards 
  { 
-   
-  digitalWrite(13,1);
+ backward();
+ } 
+ else if (Data == 'R')    //right 
+ { 
+   right();
+ } 
+ else if (Data == 'L')     //left 
+ { 
+   left();
+ } 
+ } 
+} 
+void forward()
+{
+ digitalWrite(12,1);
+  analogWrite(3,200);
+  digitalWrite(7,1);
+  analogWrite(5,200);
+};
+void backward()
+{
+ digitalWrite(13,1);
   digitalWrite(12,0);
   analogWrite(5,200);
   digitalWrite(8,1);
   digitalWrite(7,0);
   analogWrite(3,200);
-  
- } 
- else if (Data == 'R')    //right 
- { 
-   digitalWrite(13,0);
-  digitalWrite(12,1);
-  analogWrite(3,200);
-  digitalWrite(8,0);
-  digitalWrite(7,0);
- } 
- else if (Data == 'L')     //left 
- { 
-   digitalWrite(13,0);
+};
+void left()
+{
+ digitalWrite(13,0);
   digitalWrite(12,0);
   analogWrite(3,200);
   digitalWrite(8,0);
   digitalWrite(7,1);
   analogWrite(5,200);
- } 
+};
 
- } 
-} 
+void right()
+{
+ digitalWrite(13,0);
+  digitalWrite(12,1);
+  analogWrite(3,200);
+  digitalWrite(8,0);
+  digitalWrite(7,0);
+};
