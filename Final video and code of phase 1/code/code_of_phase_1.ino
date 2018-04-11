@@ -63,27 +63,18 @@ void forward()
 void backward()
 {
  digitalWrite(13,1);
-  digitalWrite(12,0);
   analogWrite(5,200);
   digitalWrite(8,1);
-  digitalWrite(7,0);
   analogWrite(3,200);
 };
 void left()
 {
- digitalWrite(13,0);
-  digitalWrite(12,0);
-  analogWrite(3,200);
-  digitalWrite(8,0);
   digitalWrite(7,1);
   analogWrite(5,200);
 };
 
 void right()
 {
- digitalWrite(13,0);
   digitalWrite(12,1);
   analogWrite(3,200);
-  digitalWrite(8,0);
-  digitalWrite(7,0);
 };
