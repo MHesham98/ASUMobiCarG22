@@ -26,15 +26,7 @@ if (Serial.available() > 0)
  unsigned int distanceInCms = sonar.ping() / US_ROUNDTRIP_CM;
  Serial.println("Distance: " + String(distanceInCms) + "cm");
  char Data = Serial.read();  
- if(Data=='F' && distanceInCms<30)
- {
-  digitalWrite(13,0);
-  digitalWrite(12,0);
-  analogWrite(3,0);
-  digitalWrite(8,0);
-  digitalWrite(7,0);
-  analogWrite(5,0);
- }
+ if(Data=='F' && distanceInCms<30); // just do not do anything
 else if(Data == 'F')        //move forwards 
  { 
    forward();
