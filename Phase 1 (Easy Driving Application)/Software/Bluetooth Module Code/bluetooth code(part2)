@@ -1,0 +1,19 @@
+
+void loop() {
+  // put your main code here, to run repeatedly:
+if ( Serial.available()>0 )
+{input = Serial.read ();
+
+  if (input == 'F')
+  { digitalWrite (m2,HIGH);
+  digitalWrite (m3,HIGH);
+  digitalWrite (m4,LOW);
+  digitalWrite (m5,LOW);
+    }
+    
+    else if (input == 'B')
+    { digitalWrite (m4,HIGH);
+  digitalWrite (m5,HIGH);
+  digitalWrite (m2,LOW);
+  digitalWrite (m3,LOW);
+    }
