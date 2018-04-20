@@ -1,0 +1,21 @@
+
+    else if (input == 'D')
+    { digitalWrite (m4,LOW);
+  digitalWrite (m5,LOW);
+  digitalWrite (m2,LOW);
+  digitalWrite (m3,LOW);
+    }
+   else if ( input == 'I')
+    {p=0;
+  gripp.write(p);
+    }
+    else if ( input == 'U' )
+{p=45;
+  gripp.write(p);
+  delay(1000);
+  p=p+45;
+  gripp.write(p);
+  delay(1000);
+}
+}
+}
