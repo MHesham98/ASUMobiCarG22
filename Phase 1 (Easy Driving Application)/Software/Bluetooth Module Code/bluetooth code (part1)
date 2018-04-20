@@ -1,0 +1,28 @@
+int led = 12 ;
+
+int input ; 
+char servo,servo1;
+int m2=2,
+m3=3,
+m4=4,
+m5=5,
+p=0;
+int F,U,B,D,I;
+#include <Servo.h>
+Servo gripp;
+
+int deg1;
+int deg2;
+void setup() {
+  // put your setup code here, to run once:
+Serial.begin (9600);
+pinMode (led,OUTPUT);
+Serial.println("START");
+pinMode (m2,OUTPUT);
+pinMode (m3,OUTPUT);
+pinMode (m4,OUTPUT);
+pinMode (m5,OUTPUT);
+gripp.attach(9);
+
+}
+
