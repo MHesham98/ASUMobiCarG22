@@ -1,0 +1,29 @@
+
+
+void loop()
+{
+     int value=1234;
+    if(CAN_MSGAVAIL == CAN.checkReceive())            // check if data coming
+    {
+        rcvTime = millis();
+        CAN.readMsgBuf(&len, buf);    // read data,  len: data length, buf: data buf
+
+        rxId= CAN.getCanId();
+
+       
+if (rxId==0xAEF){
+       
+           
+            
+            
+            Serial.print(buf[0]);
+            Serial.print('\t');
+            
+}
+else 
+Serial.print("eman");
+        Serial.println();
+    }
+    
+}
+
