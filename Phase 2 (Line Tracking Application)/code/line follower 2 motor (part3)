@@ -1,0 +1,24 @@
+
+if( vspeed =='F')        //Farward
+{digitalWrite(4,HIGH );
+digitalWrite(2,LOW );        //motor1 F
+digitalWrite(7,HIGH );
+digitalWrite(6,LOW);         //motor2 F
+digitalWrite(8,HIGH);
+       //motor3 F
+digitalWrite(13,HIGH);
+digitalWrite(12,LOW );   //motor4F
+}          else if( vspeed =='B')        //Back
+{digitalWrite(4,LOW );
+digitalWrite(2,HIGH );//motor1 B
+digitalWrite(7,LOW );
+digitalWrite(6,HIGH); //motor2 B
+digitalWrite(8,LOW);
+digitalWrite(10,HIGH);        //motor3 B
+digitalWrite(13,LOW);
+digitalWrite(12,HIGH);   //motor4 B
+
+}
+
+
+
