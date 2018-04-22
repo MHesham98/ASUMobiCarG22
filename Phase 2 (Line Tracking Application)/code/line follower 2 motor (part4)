@@ -1,0 +1,25 @@
+
+}else if( vspeed =='R')        //Rotate Right
+{digitalWrite(4,HIGH );
+digitalWrite(2,LOW );   //motor1 B
+digitalWrite(7,LOW );
+digitalWrite(6,HIGH);         //motor2 F
+digitalWrite(8,HIGH);
+digitalWrite(10,LOW);        //motor3 F
+digitalWrite(13,LOW);
+digitalWrite(12,HIGH );  //motor4 B
+}else if( vspeed =='L')        //Rotate left
+{digitalWrite(4,LOW );
+digitalWrite(2,HIGH );   //motor1 F
+digitalWrite(7,HIGH );
+digitalWrite(6,LOW);   //motor2 B
+digitalWrite(8,LOW);
+digitalWrite(10,HIGH);  //motor3 B
+digitalWrite(13,HIGH);
+digitalWrite(12,LOW );  //motor4 F
+}
+}
+
+
+
+
