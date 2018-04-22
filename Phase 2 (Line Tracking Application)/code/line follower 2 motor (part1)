@@ -1,0 +1,33 @@
+#define Emotor1   3
+#define D.1motor1 2
+
+
+#define D.2motor1 4
+
+
+#define Emotor2   5
+#define D.1motor2 6
+#define D.2motor2 7
+#define Emotor3   9
+
+#define D.2motor3 8
+#define Emotor4   10
+#define D.1motor4 12
+#define D.2motor4 13
+char order ;
+char vspeed ;
+void setup() 
+{Serial.begin(9600);
+pinMode(2,OUTPUT);
+pinMode(3,OUTPUT);
+pinMode(4,OUTPUT);
+pinMode(5,OUTPUT);
+pinMode(6,OUTPUT);
+pinMode(7,OUTPUT);
+pinMode(8,OUTPUT);
+pinMode(9,OUTPUT);
+pinMode(10,OUTPUT);
+pinMode(11,OUTPUT);
+pinMode(12,OUTPUT);
+pinMode(13,OUTPUT);
+}
