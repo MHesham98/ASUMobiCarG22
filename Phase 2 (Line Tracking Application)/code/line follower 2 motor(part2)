@@ -1,0 +1,31 @@
+
+void loop() 
+{if(Serial.available() > 0);
+{vspeed = Serial.read();}
+if(vspeed == '0') 
+//Stop 
+{digitalWrite(10,LOW);
+digitalWrite(9,LOW);
+digitalWrite(5,LOW);
+digitalWrite(3,LOW);}
+else if(vspeed =='3')  //Speed30%
+{analogWrite(10,80);
+analogWrite(9,80);
+analogWrite(3,80);
+analogWrite(5,80);
+}else if(vspeed =='5')  //Speed 50%
+{analogWrite(10,130);
+analogWrite(9,130);
+analogWrite(3,130);
+analogWrite(5,130);}
+else if(vspeed =='7')  //Speed 75%
+{analogWrite(10,180);
+analogWrite(9,180);
+analogWrite(3,180);
+analogWrite(5,180);}
+else if(vspeed =='1')  //Speed 100%
+{analogWrite(10,255);
+analogWrite(9,255);
+analogWrite(3,255);
+analogWrite(5,255);
+}
