@@ -1,0 +1,67 @@
+*Pick And Place List
+*Company=
+*Author=
+*eMail=
+*
+*Project=Control
+*Date=16:21:57
+*CreatedBy=Fritzing 0.9.3b.04.19.5c895d327c44a3114e5fcc9d8260daf0cbb52806
+*
+*
+*Coordinates in mm, always center of component
+*Origin 0/0=Lower left corner of PCB
+*Rotation in degree (0-360, math. pos.)
+*
+*No;Value;Package;X;Y;Rotation;Side;Name
+1;;DIP (Dual Inline);20.7271;-59.6172;0;Bottom;U1
+2;;5 mm [THT];14.3769;-83.1682;0;Bottom;LED17
+3;220;THT;1.67707;-79.9372;90;Bottom;R2
+4;;5 mm [THT];21.9969;-73.0082;0;Bottom;LED2
+5;220;THT;60.0971;-62.1572;0;Bottom;R8
+6;;;42.3433;-6.25752;0;Bottom;Via6
+7;;;32.1833;-21.4975;0;Bottom;Jumper10
+8;;;52.4771;-59.6172;0;Bottom;Jumper4
+9;;5 mm [THT];52.4769;-83.1682;0;Bottom;LED12
+10;;5 mm [THT];29.6169;-73.0082;0;Bottom;LED6
+11;;5 mm [THT];44.8569;-83.1682;0;Bottom;LED13
+12;;;29.6433;-24.0375;0;Bottom;Via5
+13;;;9.29707;-59.6172;0;Bottom;Jumper6
+14;220;THT;55.0171;-77.3972;180;Bottom;R9
+15;;;14.3771;-59.6172;0;Bottom;Jumper1
+16;;;34.7339;-34.1844;90;Bottom;Nano
+17;;;33.4271;-59.6172;0;Bottom;Jumper5
+18;;;29.6171;-6.27718;0;Bottom;Via3
+19;;5 mm [THT];29.6169;-83.1682;0;Bottom;LED15
+20;;5 mm [THT];60.0969;-83.1682;0;Bottom;LED11
+21;220;THT;6.75707;-57.0772;0;Bottom;R3
+22;;;4.21707;-59.6172;0;Bottom;Via8
+23;220;THT;34.6971;-51.9972;90;Bottom;R5
+24;;5 mm [THT];21.9969;-83.1682;0;Bottom;LED16
+25;;;41.0472;-73.5474;0;Bottom;Jumper14
+26;;;25.807;-73.5872;0;Bottom;Jumper15
+27;;5 mm [THT];6.75693;-73.0082;0;Bottom;LED1
+28;;5 mm [THT];60.0969;-73.0082;0;Bottom;LED5
+29;220;THT;65.1771;-74.8572;-90;Bottom;R11
+30;;;46.1271;-49.4572;0;Bottom;Jumper8
+31;;THT;6.76342;-51.9908;0;Bottom;R1
+32;;;27.0771;-59.6172;0;Bottom;Jumper2
+33;;;1.67707;-59.6172;0;Bottom;Via7
+34;;;39.7771;-59.6172;0;Bottom;Jumper3
+35;;;41.0471;-45.6472;0;Bottom;Jumper13
+36;220;THT;32.1571;-51.9972;90;Bottom;R4
+37;;5 mm [THT];44.8569;-73.0082;0;Bottom;LED8
+38;220;THT;6.75707;-67.2372;0;Bottom;R6
+39;;;37.2371;-6.27718;0;Bottom;Via1
+40;;5 mm [THT];14.3769;-73.0082;0;Bottom;LED7
+41;;5 mm [THT];6.75721;-83.1682;0;Bottom;LED18
+42;;DIP (Dual Inline);46.1271;-59.6172;180;Bottom;U2
+43;;5 mm [THT];37.2369;-73.0082;0;Bottom;LED3
+44;;5 mm [THT];37.2369;-83.1682;0;Bottom;LED14
+45;;5 mm [THT];52.4769;-73.0082;0;Bottom;LED4
+46;;;57.5702;-43.0973;0;Bottom;Jumper7
+47;;;41.0471;-6.27718;0;Bottom;Jumper16
+48;220;THT;60.1233;-44.3575;90;Bottom;R10
+49;;;41.0733;-18.9575;0;Bottom;Jumper11
+50;;THT;33.4533;-12.6075;-90;Bottom;Motor Driver
+51;;;20.7271;-49.4572;0;Bottom;Jumper9
+52;;;37.2633;-24.0375;0;Bottom;Via4
