@@ -105,28 +105,3 @@ void loop() {
 }
     
     
-void forward()
-{
- digitalWrite(12,1);
-  analogWrite(3,200);
-  digitalWrite(7,1);
-  analogWrite(5,200);
-};
-void backward()
-{
- digitalWrite(13,1);
-  analogWrite(5,200);
-  digitalWrite(8,1);
-  analogWrite(3,200);
-};
-void left()
-{
-  digitalWrite(7,1);
-  analogWrite(5,200);
-};
-
-void right()
-{
-  digitalWrite(12,1);
-  analogWrite(3,200);
-};
