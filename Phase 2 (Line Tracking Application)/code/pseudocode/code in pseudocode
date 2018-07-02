@@ -1,1 +1,10 @@
+if(sensor1=1 and sensor2=1 and sensor3=0 or sensor1=1 and sensor2=0 and sensor3=0)
+turnleft and last state=left
+if(sensor1=0 and sensor2=1 and sensor3=1 or sensor1=0 and sensor2=0 and sensor3=1)
+turnright and last state=right
+if(sensor1=0 and sensor2=1 and sensor3=0)
+gostraight and last state=straight
+if(sensor1=1 and sensor2=1 and sensor3=1 or sensor1=0 and sensor2=0 and sensor3=0)
+use laststate
+
 
