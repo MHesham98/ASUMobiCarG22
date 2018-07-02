@@ -27,33 +27,18 @@ void setup() {
   
   Serial.begin(9600);
 }
-void loop() 
-{ 
+void loop() {
+  // put your main code here, to run repeatedly:
+  if(Serial.available() >0){
  
-if (Serial.available() > 0) 
-{ 
  unsigned int distanceInCms = sonar.ping() / US_ROUNDTRIP_CM;
  Serial.println("Distance: " + String(distanceInCms) + "cm");
- char Data = Serial.read();  
- if(Data=='F' && distanceInCms<30); // just do not do anything
-else if(Data == 'F')        //move forwards 
- { 
-   forward();
- } 
- else if (Data == 'B')       //move backwards 
- { 
- backward();
- } 
- else if (Data == 'R')    //right 
- { 
-   right();
- } 
- else if (Data == 'L')     //left 
- { 
-   left();
- } 
- } 
-} 
+  
+    k=Serial.read();
+    if(k== 'F'&& distanceInCms<100);
+    
+    
+    
 void forward()
 {
  digitalWrite(12,1);
