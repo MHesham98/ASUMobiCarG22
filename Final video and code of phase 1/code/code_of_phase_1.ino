@@ -13,17 +13,20 @@ NewPing sonar(13, 12, 200);
 
 char k;
 
-void setup() 
-{ 
-Serial.begin(9600); 
- pinMode(13,OUTPUT);
- pinMode(12,OUTPUT);
- pinMode(8,OUTPUT);
- pinMode(3,OUTPUT);
- pinMode(5,OUTPUT);
- pinMode(7,OUTPUT);
- 
-} 
+void setup() {
+  // put your setup code here, to run once:
+  pinMode(M1A,OUTPUT);
+  pinMode(M1B,OUTPUT);
+
+  pinMode(M2A,OUTPUT);
+  pinMode(M2B,OUTPUT);
+
+  pinMode(EN1,OUTPUT);
+  pinMode(EN2,OUTPUT);
+
+  
+  Serial.begin(9600);
+}
 void loop() 
 { 
  
