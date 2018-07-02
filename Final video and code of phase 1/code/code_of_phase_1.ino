@@ -1,11 +1,17 @@
 
 #include <NewPing.h>
-NewPing sonar(9, 10, 200);
-// prototybes of functions
-void forward();
-void backward();
-void left();
-void right();
+NewPing sonar(13, 12, 200);
+#define M1A 6
+#define M1B 7
+
+#define M2A 8
+#define M2B 9
+
+
+#define EN1 5
+#define EN2 10
+
+char k;
 
 void setup() 
 { 
