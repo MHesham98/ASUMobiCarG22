@@ -4,8 +4,6 @@ int outPin2 = 7;    //motor1
 int outPin4 = 8;   //motor2 
 int outPin3 = 9;   //motor2 
 char bt = 0; 
-int enable1=5;
-int enable2=10;
 //BT  
 /*------------------------------------------------------------------------------*/ 
 void setup() 
