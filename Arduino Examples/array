@@ -1,8 +1,8 @@
-int t = 100;           // The higher the number, the slower the timing.
+int t = 100;           
 int ledPins[] = {
   2, 7, 4, 6, 5, 3
-};       // an array of pin numbers to which LEDs are attached
-int pinCount = 6;           // the number of pins (i.e. the length of the array)
+};      
+int pinCount = 6;          
 
 void setup() {
   // the array elements are numbered from 0 to (pinCount - 1).
